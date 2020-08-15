@@ -1,0 +1,3 @@
+include ':kbase'
+include ':app'
+rootProject.name = "KBase"
