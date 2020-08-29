@@ -13,7 +13,7 @@ import com.onion.kbase.view.IOSLoadingDialog
 @SuppressLint("Registered")
 open class MessageActivity : ConfigActivity() {
 
-    protected var v: View? = null
+
     protected lateinit var mProgressDialog: IOSLoadingDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,18 +27,14 @@ open class MessageActivity : ConfigActivity() {
     }
 
     fun showMessage(msg: String?){
-        v = findViewById<ViewGroup>(android.R.id.content).getChildAt(0)
+       ToastUtil.showShort(this,msg)
     }
 
     fun showMessage(msg: Int){
         showMessage(getString(msg))
     }
 
-    fun showToast(msg: String?){
-        ToastUtil.showShort(this,msg)
-    }
-
-    open fun showDialog(msg: String? = ""){
+    open fun showDialog(){
         // dialog
         try {
             if (isMainThread()) {

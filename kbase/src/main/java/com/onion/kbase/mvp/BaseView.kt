@@ -9,7 +9,7 @@ interface BaseView {
      * 网络进度条
      * @param msg
      */
-    fun showDialog(msg: String?)
+    fun showDialog()
 
     /**
      * 结束网络进度条
@@ -18,11 +18,4 @@ interface BaseView {
 
     fun showMessage(msg: String?)
 
-    //接口错误
-    fun onError(throwable: Throwable)
-
-    // 接口错误的时候 和 异常
-    fun onErrorFailed()
-
-    //fun getSuccessView(): View?
 }

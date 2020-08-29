@@ -19,8 +19,6 @@ abstract class SimpleActivity<D: ViewDataBinding>: MessageActivity() {
 
     protected lateinit var mBinding: D
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this,getLayoutId())
